@@ -9,6 +9,7 @@ public class Person implements Serializable {
 
     private static final long serialVersionUID = 2721776666926171120L;
 
+    private String id;
 
     private String name;
 
@@ -32,6 +33,15 @@ public class Person implements Serializable {
 
     public String getName() {
         return name;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public Person setId(String id) {
+        this.id = id;
+        return this;
     }
 
     public Person setName(String name) {

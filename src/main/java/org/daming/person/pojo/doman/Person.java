@@ -1,5 +1,6 @@
-package org.daming.person.doman;
+package org.daming.person.pojo.doman;
 
+import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.daming.person.enums.Gender;
 
 import java.io.Serializable;
@@ -132,18 +133,18 @@ public class Person implements Serializable {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("Person{");
-        sb.append("name='").append(name).append('\'');
-        sb.append(", gender=").append(gender);
-        sb.append(", surname='").append(surname).append('\'');
-        sb.append(", birthDay=").append(birthDay);
-        sb.append(", tellPhone='").append(tellPhone).append('\'');
-        sb.append(", verificationCode='").append(verificationCode).append('\'');
-        sb.append(", province='").append(province).append('\'');
-        sb.append(", city='").append(city).append('\'');
-        sb.append(", area='").append(area).append('\'');
-        sb.append(", address='").append(address).append('\'');
-        sb.append('}');
-        return sb.toString();
+        return new ToStringBuilder(this)
+                .append("id", id)
+                .append("name", name)
+                .append("gender", gender)
+                .append("surname", surname)
+                .append("birthDay", birthDay)
+                .append("tellPhone", tellPhone)
+                .append("verificationCode", verificationCode)
+                .append("province", province)
+                .append("city", city)
+                .append("area", area)
+                .append("address", address)
+                .toString();
     }
 }

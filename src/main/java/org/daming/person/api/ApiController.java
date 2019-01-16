@@ -1,6 +1,6 @@
 package org.daming.person.api;
 
-import org.daming.person.doman.Person;
+import org.daming.person.pojo.doman.Person;
 import org.daming.person.pojo.response.DataResponse;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

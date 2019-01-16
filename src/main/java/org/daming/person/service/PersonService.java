@@ -1,6 +1,6 @@
 package org.daming.person.service;
 
-import org.daming.person.doman.Person;
+import org.daming.person.pojo.doman.Person;
 
 public interface PersonService {
 

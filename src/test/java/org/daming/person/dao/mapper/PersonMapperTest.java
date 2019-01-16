@@ -21,6 +21,7 @@ public class PersonMapperTest {
     public void get() {
         Person person = personMapper.get("1");
         assertNotNull(person);
+        assertNotNull(person.getGender());
         System.out.println(person);
     }
 

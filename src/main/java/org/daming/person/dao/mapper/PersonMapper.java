@@ -16,4 +16,11 @@ public interface PersonMapper {
             @Result(column = "gender", property = "gender", typeHandler = GenderTypeHandler.class)
     })
     Person get(@Param("id") String id);
+
+
+    void update(Person person);
+
+    void add(Person person);
+
+    void delete(String id);
 }

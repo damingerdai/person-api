@@ -17,7 +17,6 @@ public interface PersonMapper {
     })
     Person get(@Param("id") String id);
 
-
     void update(Person person);
 
     void add(Person person);

@@ -1,5 +1,6 @@
 package org.daming.person.api;
 
+import io.swagger.annotations.Api;
 import org.daming.person.pojo.doman.Person;
 import org.daming.person.pojo.response.DataResponse;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping(path = "api/v1")
+@Api(tags = "Person Api")
 public class ApiController {
 
     @GetMapping("/person/{id}")

@@ -18,7 +18,11 @@ public interface PersonMapper {
     })
     Person get(@Param("id") String id);
 
-    @Update("UPDATE person SET `name` = #{name}, gender = #{gender}, surname = #{surname}, birthday = #{birthday}, tellphone = #{tellphone}, province = #{province}, city = #{city}, `area` = #{area}, update_user = 'system', update_date = NOW() WHERE id = #{id}")
+    // @Update("UPDATE person SET `name` = #{name}, gender = #{gender}, surname = #{surname}, birthday = #{birthday,javaType=DATE}, tellphone = #{tellphone}, province = #{province}, city = #{city}, `area` = #{area}, update_user = 'system', update_date = NOW() WHERE id = #{id}")
+    @Update("UPDATE person SET `name` = #{name}, gender = #{gender}, surname = #{surname}, birthday = #{birthDay}, tellphone = #{tellPhone}, province = #{province}, city = #{city}, `area` = #{area}, update_user = 'system', update_date = NOW() WHERE id = #{id}")
+//    @Results({
+//            @Result(column = "gender", property = "gender", typeHandler = GenderTypeHandler.class)
+//    })
     void update(Person person);
 
     void add(Person person);

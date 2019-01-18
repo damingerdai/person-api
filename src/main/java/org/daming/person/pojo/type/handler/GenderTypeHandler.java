@@ -22,7 +22,7 @@ public class GenderTypeHandler extends BaseTypeHandler<Gender> {
 
     @Override
     public void setNonNullParameter(PreparedStatement preparedStatement, int i, Gender gender, JdbcType jdbcType) throws SQLException {
-        preparedStatement.setString(1, map.get(gender));
+        preparedStatement.setString(i, map.get(gender));
     }
 
     @Override

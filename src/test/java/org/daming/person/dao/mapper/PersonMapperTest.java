@@ -36,7 +36,7 @@ public class PersonMapperTest {
         person.setGender(Gender.F);
         System.out.println(person.getGender());
         personMapper.update(person);
-
     }
+
 
 }

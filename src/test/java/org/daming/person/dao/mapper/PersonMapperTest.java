@@ -54,5 +54,9 @@ public class PersonMapperTest {
         personMapper.add(person);
     }
 
+    @Test
+    public void delete() {
+        personMapper.delete("1");
+    }
 
 }

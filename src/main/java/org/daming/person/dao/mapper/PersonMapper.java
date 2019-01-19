@@ -1,5 +1,6 @@
 package org.daming.person.dao.mapper;
 
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
@@ -29,5 +30,6 @@ public interface PersonMapper {
     @Insert("INSERT INTO person (id, `name`, gender, surname, birthday, tellphone, province, city,`area`, address, create_user, create_date, update_user,update_date) VALUES (#{id}, #{name}, #{gender}, #{surname}, #{birthDay}, #{tellPhone}, #{province}, #{city}, #{area}, #{address}, \"system\", NOW(), \"system\", NOW())")
     void add(Person person);
 
+    @Delete("DELETE  FROM person WHERE id = #{id}")
     void delete(String id);
 }

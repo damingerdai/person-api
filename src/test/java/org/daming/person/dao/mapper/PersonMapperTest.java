@@ -10,6 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.time.Instant;
+import java.util.Date;
 
 import static org.junit.Assert.*;
 
@@ -36,6 +37,21 @@ public class PersonMapperTest {
         person.setGender(Gender.F);
         System.out.println(person.getGender());
         personMapper.update(person);
+    }
+
+    @Test
+    public void add() {
+        Person person = new Person()
+                .setId(System.currentTimeMillis() + "")
+                .setName("daming")
+                .setGender(Gender.F)
+                .setSurname("arthur ming")
+                .setProvince("上海")
+                .setCity("杨浦")
+                .setArea("定海街道")
+                .setBirthDay(new Date())
+                .setTellPhone("17805051311");
+        personMapper.add(person);
     }
 
 

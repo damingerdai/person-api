@@ -1,35 +1,46 @@
 package org.daming.person.pojo.doman;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.daming.person.enums.Gender;
 
 import java.io.Serializable;
 import java.util.Date;
 
+@ApiModel(value="Person",description="个人信息")
 public class Person implements Serializable {
 
     private static final long serialVersionUID = 2721776666926171120L;
 
+    @ApiModelProperty(name = "id",value = "ID",example = "1")
     private String id;
 
+    @ApiModelProperty(name = "name",value = "名字",example = "daming")
     private String name;
 
+    @ApiModelProperty(name = "gender",value = "性别",example = "F")
     private Gender gender;
 
+    @ApiModelProperty(name = "surname",value = "姓氏",example = "明")
     private String surname;
 
+    @ApiModelProperty(name = "birthDay",value = "生日")
     private Date birthDay;
 
+    @ApiModelProperty(name = "tellPhone",value = "手机号码")
     private String tellPhone;
 
-    private String verificationCode;
-
+    @ApiModelProperty(name = "province",value = "省份")
     private String province;
 
+    @ApiModelProperty(name = "city",value = "城市")
     private String city;
 
+    @ApiModelProperty(name = "area",value = "区县")
     private String area;
 
+    @ApiModelProperty(name = "address",value = "地址")
     private String address;
 
     public String getName() {
@@ -86,15 +97,6 @@ public class Person implements Serializable {
         return this;
     }
 
-    public String getVerificationCode() {
-        return verificationCode;
-    }
-
-    public Person setVerificationCode(String verificationCode) {
-        this.verificationCode = verificationCode;
-        return this;
-    }
-
     public String getProvince() {
         return province;
     }
@@ -140,7 +142,6 @@ public class Person implements Serializable {
                 .append("surname", surname)
                 .append("birthDay", birthDay)
                 .append("tellPhone", tellPhone)
-                .append("verificationCode", verificationCode)
                 .append("province", province)
                 .append("city", city)
                 .append("area", area)

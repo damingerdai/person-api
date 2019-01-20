@@ -9,5 +9,5 @@ swagger:
   enabled: true
 
 snowflake:
-  workerId: 0
-  datacenterId: 0
+  worker-id: 1
+  datacenter-id: 2

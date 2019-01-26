@@ -2,9 +2,7 @@ package org.daming.person.utils;
 
 import org.junit.Test;
 
-import java.security.Key;
 import java.util.HashMap;
-import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import io.jsonwebtoken.ExpiredJwtException;
 

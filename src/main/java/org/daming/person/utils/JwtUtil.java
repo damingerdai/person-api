@@ -14,7 +14,7 @@ import java.util.Objects;
 public class JwtUtil {
 
 
-    public String createJWT(String id, String subject, long ttlMillis, SecretKey secretKey, Map<String, Object> claims) {
+    public static String createJWT(String id, String subject, long ttlMillis, SecretKey secretKey, Map<String, Object> claims) {
         SignatureAlgorithm signatureAlgorithm = SignatureAlgorithm.HS256;
         long nowMillis = System.currentTimeMillis();
         Date now = new Date(nowMillis);
@@ -31,13 +31,13 @@ public class JwtUtil {
         return builder.compact();
     }
 
-    public Claims parseJwt(String jwt, SecretKey secretKey) {
+    public static Claims parseJwt(String jwt, SecretKey secretKey) {
         Claims claims = Jwts.parser().setSigningKey(secretKey).parseClaimsJws(jwt).getBody();
         return claims;
     }
 
 
-    public SecretKey generalKey(String key) {
+    public static SecretKey generalKey(String key) {
         byte[] encodeKey = Base64.decodeBase64(key);
         SecretKey secretKey = new SecretKeySpec(encodeKey, 0, encodeKey.length, "AES");
         return secretKey;

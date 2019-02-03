@@ -11,3 +11,7 @@ swagger:
 snowflake:
   workerId: 0
   datacenterId: 0
+
+#url:
+#  filter:
+#    ignore: .*(swagger|webjars|configuration|token|images|api-docs).*

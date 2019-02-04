@@ -24,7 +24,7 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2).apiInfo(apiInfo())
                 .enable(swaggerEanled).select()
                 .apis(RequestHandlerSelectors.basePackage("org.daming.person.api"))
-                .paths(PathSelectors.any()).build().pathMapping("/");
+                .paths(PathSelectors.regex("/api/v1/.*")).build().pathMapping("/");
     }
 
     private ApiInfo apiInfo() {

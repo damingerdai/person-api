@@ -30,6 +30,7 @@ public class AuthenticationFilter extends GenericFilterBean {
         var in = Instant.now();
         try {
             // Todo do filter
+            filterChain.doFilter(servletRequest, servletResponse);
         } catch (Exception ex) {
             SecurityContextHolder.clearContext();
             if (logger.isErrorEnabled()) {

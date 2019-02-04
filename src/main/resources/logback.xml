@@ -111,7 +111,7 @@
         <appender-ref ref ="common.logger"/>
     </appender>
 
-    <root level="INFO">
+    <root level="DEBUG">
         <appender-ref ref="ASYNC" />
     </root>
 

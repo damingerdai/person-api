@@ -34,7 +34,7 @@ public class PersonServiceImpl implements PersonService {
 
     @Override
     public void delete(String id) {
-
+        personMapper.delete(id);
     }
 
     public PersonServiceImpl(PersonMapper personMapper, SnowflakeIdWorker snowflakeIdWorker) {

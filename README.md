@@ -18,7 +18,12 @@ docker volume create --name=person-volume
 
 ### Create Database
 
-
 ```shell
 docker-compose up db
+```
+
+### Migrate
+
+```shell
+mvn flyway:migrate
 ```

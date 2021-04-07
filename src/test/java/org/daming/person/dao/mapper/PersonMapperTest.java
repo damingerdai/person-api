@@ -4,6 +4,7 @@ import org.daming.person.Application;
 import org.daming.person.enums.Gender;
 import org.daming.person.pojo.doman.Person;
 import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -16,6 +17,7 @@ import static org.junit.Assert.*;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(classes = Application.class)
+@Disabled
 public class PersonMapperTest {
 
     @Autowired

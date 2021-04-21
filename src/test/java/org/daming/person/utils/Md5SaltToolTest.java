@@ -1,14 +1,12 @@
 package org.daming.person.utils;
 
 import org.daming.person.pojo.User;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.io.UnsupportedEncodingException;
 import java.security.NoSuchAlgorithmException;
 import java.util.HashMap;
 import java.util.Map;
-
-import static org.junit.Assert.*;
 
 public class Md5SaltToolTest {
 

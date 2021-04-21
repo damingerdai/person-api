@@ -1,25 +1,24 @@
 package org.daming.person.service;
 
+import org.aspectj.lang.annotation.Before;
 import org.daming.person.Application;
-import org.daming.person.pojo.doman.Person;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.daming.person.pojo.doman.Person;;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
-@RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(classes = Application.class)
 @Transactional
 public class PersonServiceTest {
 
     private PersonService personService;
 
-    @Before
+    @BeforeAll
     public void before() {
         assertNotNull(personService);
     }

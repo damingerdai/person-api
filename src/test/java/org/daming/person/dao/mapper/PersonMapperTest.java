@@ -3,9 +3,8 @@ package org.daming.person.dao.mapper;
 import org.daming.person.Application;
 import org.daming.person.enums.Gender;
 import org.daming.person.pojo.doman.Person;
-import org.junit.Test;
 import org.junit.jupiter.api.Disabled;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -13,9 +12,9 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import java.time.Instant;
 import java.util.Date;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
-@RunWith(SpringJUnit4ClassRunner.class)
+
 @SpringBootTest(classes = Application.class)
 @Disabled
 public class PersonMapperTest {

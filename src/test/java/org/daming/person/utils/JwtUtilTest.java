@@ -1,16 +1,17 @@
 package org.daming.person.utils;
 
-import org.junit.Test;
 
 import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
 import io.jsonwebtoken.ExpiredJwtException;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class JwtUtilTest {
 
-    @Test(expected = ExpiredJwtException.class)
+    // @Test(expected = ExpiredJwtException.class)
+    @Test
     public void test() {
         var k = "daming";
         var key = JwtUtil.generalKey(k);

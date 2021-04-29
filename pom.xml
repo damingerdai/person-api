@@ -118,8 +118,8 @@
                 <artifactId>flyway-maven-plugin</artifactId>
                 <version>6.0.6</version>
                 <configuration>
-                    <url>jdbc:mysql://localhost:3306/db_person?serverTimezone=GMT%2B8&amp;useSSL=false</url>
-                    <user>root</user>
+                    <url>jdbc:mysql://localhost:3306/db_person?serverTimezone=GMT%2B8&amp;useSSL=false&amp;allowPublicKeyRetrieval=true</url>
+                    <user>daming</user>
                     <password>267552</password>
                 </configuration>
             </plugin>
